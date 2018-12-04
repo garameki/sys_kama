@@ -23,7 +23,7 @@ class Max31856:
 			self.spi.mode = 0x03			#モード3 CPOL:1 CPHA:1 ,Especially CPHA must be 1
 			self.spi.max_speed_hz = 1000000	#最大クロック周波数
 
-	def version(self)
+	def version(self):
 		return "1.2"
 
 	def close(self):

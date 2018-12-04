@@ -9,17 +9,18 @@ import smbus
 import time
 
 class Ht16k33:
-	D = [0] * 10
-	D[0] = 0x3F
-	D[1] = 0x06
-	D[2] = 0x5B
-	D[3] = 0x4F
-	D[4] = 0x66
-	D[5] = 0x6D
-	D[6] = 0x7D
-	D[7] = 0x27
-	D[8] = 0x7F
-	D[9] = 0x6F
+	DDD = { }
+	DDD["0"] = 0x3F
+	DDD["1"] = 0x06
+	DDD["2"] = 0x5B
+	DDD["3"] = 0x4F
+	DDD["4"] = 0x66
+	DDD["5"] = 0x6D
+	DDD["6"] = 0x7D
+	DDD["7"] = 0x27
+	DDD["8"] = 0x7F
+	DDD["9"] = 0x6F
+	DDD["-"] = 0x00
 
 	def __init__(self,dev_bus,dev_addr):
 		#(hex) dev_bus
@@ -31,7 +32,7 @@ class Ht16k33:
 		self.bus.write_byte(self.addr,0xE0)
 
 	def version(self):
-		return "1.2"
+		return "1.1"
 
 
 		#light strength
@@ -48,12 +49,13 @@ class Ht16k33:
 	def print(self,sValue="0000",fColon=False):
 		#(String) sValue
 		#(boolean) fColon : 0:disappear  1:appear
+		sValue = "----" + sValue
 		flag = True
 		try:
-			d4 = Ht16k33.D[int(sValue[-1])]
-			d3 = Ht16k33.D[int(sValue[-2])]
-			d2 = Ht16k33.D[int(sValue[-3])]
-			d1 = Ht16k33.D[int(sValue[-4])]
+			d4 = Ht16k33.DDD[sValue[-1]]
+			d3 = Ht16k33.DDD[sValue[-2]]
+			d2 = Ht16k33.DDD[sValue[-3]]
+			d1 = Ht16k33.DDD[sValue[-4]]
 		except:
 			print("sValue contains another of [0-9] letter")
 			flag = False
