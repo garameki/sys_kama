@@ -1,3 +1,14 @@
+## 2.0.1 (12月 04, 2018)
+  - Create new release-2.0 branch  v2.0.0...HEAD
+  - Merge from the branch release-1.0  v2.0.0...HEAD
+  - Bump version to 1.0.3.  v2.0.0...HEAD
+  - Bump version to 1.0.2.  v2.0.0...HEAD
+  - Bump version to 1.0.1.  v2.0.0...HEAD
+  - Add VERSION and CHANGELOG.md files, Bump version to v1.0.0.  v2.0.0...HEAD
+  - Modify 	modified:   CHANGELOG.md  v2.0.0...HEAD
+  - Add VERSION and CHANGELOG.md files, Bump version to v0.1.0.  v2.0.0...HEAD
+  - Initial commit  v2.0.0...HEAD
+
 ## 2.0 (12月 04,2018)
   - Merge from the branch release-1.0  v1.0.3...HEAD
   - Bump version to 1.0.3.  v1.0.3...HEAD

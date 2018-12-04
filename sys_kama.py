@@ -21,8 +21,19 @@ spi1 = Max31856(SPI,CE1)
 temps0 = spi0.read()
 temps1 = spi1.read()
 
-ht0.print(str(math.floor(temps0["HJ"]*0.0625)).strip(),2)
-ht1.print(str(math.floor(temps1["HJ"]*0.0625)).strip(),2)
+temp0 =math.floor(temps0["HJ"]*0.0625)
+temp1 =math.floor(temps1["HJ"]*0.0625)
+if temp0 < -1000:
+	sTemp0 = "FAUL"
+else:
+	sTemp0 = str(temp0)
+if temp1 < -1000:
+	sTemp1 = "FAUL"
+else:
+	sTemp1 = str(temp1)
+
+ht0.print(sTemp0,2)
+ht1.print(sTemp1,2)
 
 
 
