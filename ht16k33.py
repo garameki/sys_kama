@@ -21,6 +21,10 @@ class Ht16k33:
 	DDD["8"] = 0x7F
 	DDD["9"] = 0x6F
 	DDD["-"] = 0x00
+	DDD["F"] = 0x71
+	DDD["A"] = 0x77
+	DDD["U"] = 0x3E
+	DDD["L"] = 0x38
 
 	def __init__(self,dev_bus,dev_addr):
 		#(hex) dev_bus
@@ -85,6 +89,8 @@ if __name__ == "__main__":
 	arg = sys.argv
 	if len(arg) == 1:
 		print("enter number of 4dig7seg-LED device(s),expect [1-2]")
+		h = Ht16k33(1,0x70)
+		h.print("FAUL",2)
 	else:
 		if arg[1] == "1":
 			flag1 = True
