@@ -8,7 +8,7 @@ import smbus
 
 import time
 
-class H16k33:
+class Ht16k33:
 	D = [0] * 10
 	D[0] = 0x3F
 	D[1] = 0x06
@@ -31,7 +31,7 @@ class H16k33:
 		self.bus.write_byte(self.addr,0xE0)
 
 	def version(self):
-		return "1.1"
+		return "1.2"
 
 
 		#light strength
@@ -50,10 +50,10 @@ class H16k33:
 		#(boolean) fColon : 0:disappear  1:appear
 		flag = True
 		try:
-			d4 = H16k33.D[int(sValue[-1])]
-			d3 = H16k33.D[int(sValue[-2])]
-			d2 = H16k33.D[int(sValue[-3])]
-			d1 = H16k33.D[int(sValue[-4])]
+			d4 = Ht16k33.D[int(sValue[-1])]
+			d3 = Ht16k33.D[int(sValue[-2])]
+			d2 = Ht16k33.D[int(sValue[-3])]
+			d1 = Ht16k33.D[int(sValue[-4])]
 		except:
 			print("sValue contains another of [0-9] letter")
 			flag = False
@@ -100,8 +100,8 @@ if __name__ == "__main__":
 			DEVICE_ADDR0 = 0x70
 			DEVICE_ADDR1 = 0x71
 
-			h1 = H16k33(DEVICE_BUS,DEVICE_ADDR0)
-			if flag2:h2 = H16k33(DEVICE_BUS,DEVICE_ADDR1)
+			h1 = Ht16k33(DEVICE_BUS,DEVICE_ADDR0)
+			if flag2:h2 = Ht16k33(DEVICE_BUS,DEVICE_ADDR1)
 
 			coron = 0
 			count = 1 
