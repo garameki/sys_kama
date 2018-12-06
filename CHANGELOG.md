@@ -1,3 +1,22 @@
+## 2.2 (12月 07,2018)
+  - Merge from the branch release-2.1  v2.1.0...HEAD
+  - Add LCD to system itself 	new file:   acm1602.py 	new file:   character_table.py 	modified:   max31856.py 	modified:   sys_kama.py  v2.1.0...HEAD
+  - writing now  v2.1.0...HEAD
+  - add renew* in .gitignore  v2.1.0...HEAD
+  - version1.3  v2.1.0...HEAD
+  - Create new release-2.1 branch  v2.1.0...HEAD
+  - Merge from the branch release-2.0  v2.1.0...HEAD
+  - Bump version to 2.0.1.  v2.1.0...HEAD
+  - Create new release-2.0 branch  v2.1.0...HEAD
+  - Merge from the branch release-1.0  v2.1.0...HEAD
+  - Bump version to 1.0.3.  v2.1.0...HEAD
+  - Bump version to 1.0.2.  v2.1.0...HEAD
+  - Bump version to 1.0.1.  v2.1.0...HEAD
+  - Add VERSION and CHANGELOG.md files, Bump version to v1.0.0.  v2.1.0...HEAD
+  - Modify 	modified:   CHANGELOG.md  v2.1.0...HEAD
+  - Add VERSION and CHANGELOG.md files, Bump version to v0.1.0.  v2.1.0...HEAD
+  - Initial commit  v2.1.0...HEAD
+
 ## 2.1 (12月 04,2018)
   - Merge from the branch release-2.0  v2.0.1...HEAD
   - Bump version to 2.0.1.  v2.0.1...HEAD
