@@ -26,9 +26,7 @@ class Max31856:
 	def version(self):
 		return "1.3"
 
-	def analyze_fault(self):
-		values = self.read()
-		code = int(values["FAULT"])
+	def analyze_fault(self,code):
 		if code:
 			if code & 1:
 				print("断線")
@@ -48,6 +46,18 @@ class Max31856:
 				print("熱接点温度が仕様の使用温度を超えている")
 		else:
 			print("正常")
+
+	def analyze_fault_for_LCD(self,code):
+		moji = ""
+		if code & 1:moji +="ダンセン　"
+		if code & 2:moji += "デンアツイジョウ　"
+		if code & 4:moji +="オンドカゲン　"
+		if code & 8:moji +="オンドジョウゲン　"
+		if code & 16:moji +="レイセッテンオンドシタスギ　"
+		if code & 32:moji +="レイセッテンオンドウエスギ　"
+		if code & 64:moji +="レイセッテン　シヨウハンイゴエ　"
+		if code & 128:moji +="ネツセッテン　シヨウハンイゴエ"
+		return moji
 
 
 
