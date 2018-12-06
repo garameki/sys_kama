@@ -24,7 +24,33 @@ class Max31856:
 			self.spi.max_speed_hz = 1000000	#最大クロック周波数
 
 	def version(self):
-		return "1.2"
+		return "1.3"
+
+	def analyze_fault(self):
+		values = self.read()
+		code = int(values["FAULT"])
+		if code:
+			if code & 1:
+				print("断線")
+			if code & 2:
+				print("電圧が低すぎるか、高すぎる")
+			if code & 4:
+				print("温度が設定下限を超えている")
+			if code & 8:
+				print("温度が設定上限を超えている")
+			if code & 16:
+				print("冷接点温度が設定下限を超えている")
+			if code & 32:
+				print("冷接点温度が設定上限を超えている")
+			if code & 64:
+				print("冷接点温度が仕様の使用範囲を超えている")
+			if code & 128:
+				print("熱接点温度が仕様の使用温度を超えている")
+		else:
+			print("正常")
+
+
+
 
 	def close(self):
 		if self.spi is not None:
@@ -52,8 +78,8 @@ class Max31856:
 			resp = self.spi.xfer([0x0f,dummy])
 			if (resp[1] & 0xFF) != 0:
 				valueFlt = resp[1]
-				valueHJ = ""
-				valueCJ = ""
+				valueHJ = -10000
+				valueCJ = -10000
 			else:
 
 				valueFlt = resp[1]
@@ -113,6 +139,7 @@ if __name__ == '__main__':
 			print("Fault {}".format(vals["FAULT"]))
 			print("HJ {}".format(vals["HJ"]))
 			print("CJ {}".format(vals["CJ"]))
+			spi.analyze_fault()
 			spi.close()
 
 
