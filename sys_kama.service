@@ -1,0 +1,9 @@
+[Unit]
+Description=Temperature Control System
+
+[Service]
+ExecStart=/home/pi/src/sys_kama/sys_kama.sh
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
