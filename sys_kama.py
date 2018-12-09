@@ -9,13 +9,13 @@ import threading
 	
 def mes_pri(spi,ht,gyou):
 	temps = spi.read()
-	print(temps)
+	#print(temps)
 	if temps["FAULT"] == 0:
 		temp = temps["HJ"]*0.0625
 		tempHT =str(math.floor(temp))
 		tempACM = str(temp)
 	else:
-		spi.analyze_fault(temps["FAULT"])
+#		spi.analyze_fault(temps["FAULT"])
 		tempACM = spi.analyze_fault_for_LCD(temps["FAULT"])
 		tempHT = "F-"+("0"+str(temps["FAULT"]))[-2:]
 	ht.print(tempHT,2)
