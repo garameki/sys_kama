@@ -21,10 +21,10 @@ def mes_pri(spi,ht,gyou):
 	ht.print(tempHT,2)
 	if gyou == 1:
 #v3.0.0		acm.line1()
-		:
+		pass
 	elif gyou == 2:
 #v3.0.0		acm.line2()
-		:
+		pass
 #v3.0.0	acm.sendMessage(tempACM)
 	time.sleep(1)
 
