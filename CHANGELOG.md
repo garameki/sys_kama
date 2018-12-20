@@ -1,3 +1,35 @@
+## 3.0.2 (12月 20, 2018)
+  - Bump version to 3.0.1.  v3.0.1...HEAD
+  - ACM1602 LCDモジュールをを専有しないようにします そのために、サービスのshellもファイル名を変更しました。 いままでのsys_kama.pyは残します。 	modified:   README.md 	modified:   sys_kama.sh 	new file:   sys_kama_v3.0.0.py  v3.0.1...HEAD
+  - Create new release-3.0 branch  v3.0.1...HEAD
+  - Merge from the branch release-2.3  v3.0.1...HEAD
+  - For what i do not know ??? 	new file:   last_path.sh  v3.0.1...HEAD
+  - Bump version to 2.3.1.  v3.0.1...HEAD
+  - Create new release-2.3 branch  v3.0.1...HEAD
+  - Merge from the branch release-2.2  v3.0.1...HEAD
+  - Append about daemon work 	modified:   README.md  v3.0.1...HEAD
+  - To work as daemon 	new file:   sys_kama.service  v3.0.1...HEAD
+  - Work as daemon 	new file:   sys_kama.sh  v3.0.1...HEAD
+  - Bump version to 2.2.1.  v3.0.1...HEAD
+  - Create new release-2.2 branch  v3.0.1...HEAD
+  - Merge from the branch release-2.1  v3.0.1...HEAD
+  - Add LCD to system itself 	new file:   acm1602.py 	new file:   character_table.py 	modified:   max31856.py 	modified:   sys_kama.py  v3.0.1...HEAD
+  - writing now  v3.0.1...HEAD
+  - add renew* in .gitignore  v3.0.1...HEAD
+  - version1.3  v3.0.1...HEAD
+  - Create new release-2.1 branch  v3.0.1...HEAD
+  - Merge from the branch release-2.0  v3.0.1...HEAD
+  - Bump version to 2.0.1.  v3.0.1...HEAD
+  - Create new release-2.0 branch  v3.0.1...HEAD
+  - Merge from the branch release-1.0  v3.0.1...HEAD
+  - Bump version to 1.0.3.  v3.0.1...HEAD
+  - Bump version to 1.0.2.  v3.0.1...HEAD
+  - Bump version to 1.0.1.  v3.0.1...HEAD
+  - Add VERSION and CHANGELOG.md files, Bump version to v1.0.0.  v3.0.1...HEAD
+  - Modify 	modified:   CHANGELOG.md  v3.0.1...HEAD
+  - Add VERSION and CHANGELOG.md files, Bump version to v0.1.0.  v3.0.1...HEAD
+  - Initial commit  v3.0.1...HEAD
+
 ## 3.0.1 (12月 20, 2018)
   - ACM1602 LCDモジュールをを専有しないようにします そのために、サービスのshellもファイル名を変更しました。 いままでのsys_kama.pyは残します。 	modified:   README.md 	modified:   sys_kama.sh 	new file:   sys_kama_v3.0.0.py  v3.0.0...HEAD
   - Create new release-3.0 branch  v3.0.0...HEAD
