@@ -13,4 +13,9 @@ To make sys_kama.py work as daemon(service):
 	How to recognize addition to service:  
 		systemctl list-unit-files --type=service | grep sys_kama  
   
+  history:  
+  	version3.0:	今まで専属で使っていたLCDモジュールを、共用にします。  
+			そのため、一時、LCDモジュールを使えなくします。  
+			ライブラリとしてのACM1602は温存します。  
+
 
