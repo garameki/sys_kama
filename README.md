@@ -13,4 +13,14 @@ To make sys_kama.py work as daemon(service):
 	How to recognize addition to service:  
 		systemctl list-unit-files --type=service | grep sys_kama  
   
-
+置く場所  
+========  
+	~/src/sys_kama/の中  
+  
+説明  
+====  
+ acm1602.py  
+ 	LCDに表示するためのライブラリ  
+ ht16k33.py  
+ 	4桁8digitのデジタル表示器に数字を出すためのライブラリ  
+  
